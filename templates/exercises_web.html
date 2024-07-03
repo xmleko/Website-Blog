@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista ćwiczeń</title>
+</head>
+<body>
+    <h1>Lista ćwiczeń </h1>
+    <ul>
+        {% for exercise in exercises %}
+        <li>
+            <strong>Nazwa:</strong> {{ exercise.name }}<br>
+            <strong>Poziom trudności:</strong> {{ exercise.difficult_level }}<br>
+            <strong>Opis:</strong> {{ exercise.description }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
