@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog, poradnik sportowy, jedzeniowy.</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/start_web.css' %}">
 </head>
 <body>
+    <div class="logonav">
+        <img src="{% static 'images/navbar/img.jpg' %}">
+        <img src="{% static 'images/navbar/images.png' %}">
+        <img src="{% static 'images/navbar/img2.jpg' %}">
+    </div>
 
+    <div class="topnav">
+      <a class="active" href="{% url 'start_web' %}">Home</a>
+      <a href="{% url 'foods_web' %}">Jedzenie</a>
+      <a href="{% url 'exercises_web' %}">Ćwiczenia</a>
+    </div>
 </body>
 </html>
