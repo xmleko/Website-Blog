@@ -28,7 +28,18 @@
     </div>
 
     <div class="container">
+        <ul>
+            {% for loose in loose %}
+            <li>
+                <strong>Tytuł:</strong> {{ loose.title }}<br>
+                <strong>Opis:</strong> {{ loose.short_description }}<br>
+                <span>{{ loose.author }}</span> <br>
+                <span>{{ loose.data }}</span>  <br>
+                <span><img src="{{ loose.logo.url }}"></span><br>
 
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </body>
 </html>

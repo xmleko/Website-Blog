@@ -2,38 +2,35 @@
 .logo {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* section navbar */
 .topnav {
-    position: fixed;
     display: flex;
     height: 58px;
-    margin-top:20px;
     align-items: center;
     background: linear-gradient(to left, #F87356, #F33A4B);
     width: 100%;
     padding: 0;
-    left: 0;
-    right: 0;
 }
 
 .lettering {
     font-size: 16px;
     color: white;
     text-decoration: none;
+    margin: 0 20px;
 }
 
 .menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-right: 20px;
     flex: 1;
 }
 
 .social-media {
-    margin-right:50px;
+    margin-right: 20px;
 }
 
 .icon img {
@@ -42,6 +39,6 @@
 }
 
 /* section container */
-.containter {
-
+.container {
+    margin-top: 80px;
 }
