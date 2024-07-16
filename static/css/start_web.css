@@ -40,5 +40,57 @@
 
 /* section container */
 .container {
+    list-style-type: none;
     margin-top: 80px;
 }
+
+.container ul {
+    list-style-type: none;
+}
+
+
+.img {
+    display:flex;
+}
+
+.title {
+    position: relative;
+    bottom: 10px;
+    left:550px;
+}
+
+.author {
+    position:relative;
+    bottom: 20px;
+    left:550px;
+}
+
+.date {
+    position:relative;
+    bottom: 35px;
+    left:600px;
+}
+
+.desc{
+    position:relative;
+    top: 40px;
+    left:550px;
+}
+
+.img {
+    display:inline;
+    position:relative;
+    bottom: 78px;
+}
+
+.last_write{
+    position:relative;
+    top: 40px;
+    left:700px;
+}
+
+.last_write ul {
+    list-style-type: none;
+}
+
+

@@ -5,7 +5,12 @@ from .models import LooseWrite
 
 def start_web(request):
     loose = LooseWrite.objects.all()
-    return render(request, 'start_web.html', {'loose': loose})
+    loose_last_write = LooseWrite.objects.all().order_by('-id')[:3]
+    return render(request, 'start_web.html', {'loose': loose, 'loose_last_write': loose_last_write})
+
+def start_web_get_last_write(request):
+    loose_last_write = LooseWrite.objects.all().order_by('-id')[:3]
+    return render(request, 'start_web.html', {'loose_last_write': loose_last_write})
 
 def show_loose(request):
     loose = LooseWrite.objects.all()
