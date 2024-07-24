@@ -7,7 +7,6 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/start_web.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
 </head>
 <body>
     <div class="logo">
@@ -27,30 +26,31 @@
         </div>
     </div>
 
-    <div class="container">
-        <ul>
-            {% for loose in loose %}
-            <li>
-                <strong class="title">Tytuł:</strong> <span class="title">{{ loose.title }}</span><br>
-                <strong class="desc">Opis:</strong> <span class="desc">{{ loose.short_description }}</span><br>
-                <span class="author">{{ loose.author }}</span> <br>
-                <span class="date">{{ loose.data }}</span>  <br>
-                <span class="img"><img src="{{ loose.logo.url }}"></span><br>
+    <div class="main-container">
+        <div class="container">
+            <ul>
+                {% for loose in loose %}
+                <li>
+                    <strong class="title">Tytuł:</strong> <span class="title">{{ loose.title }}</span><br>
+                    <strong class="desc">Opis:</strong> <span class="desc">{{ loose.short_description }}</span><br>
+                    <span class="author">{{ loose.author }}</span> <br>
+                    <span class="date">{{ loose.data }}</span>  <br>
+                    <span class="img"><img src="{{ loose.logo.url }}"></span><br>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="last_write">
-        <ul>
-            {% for loose in loose_last_write %}
-            <li>
-                <strong class="last_write">aasd:</strong> <span class="last_write">{{ loose.title }}</span><br>
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="last_write">
+            <ul>
+                <span class = "last_write_title">Ostatnie wpisy:</span>
+                {% for loose in loose_last_write %}
+                <li>
+                    <span class="last_write_letter">{{ loose.title }}</span><br>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </body>
 </html>
-
