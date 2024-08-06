@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Food
 from .models import Exercise
+from django.shortcuts import render, get_object_or_404
 from .models import LooseWrite
 
 def start_web(request):
@@ -23,3 +24,7 @@ def show_food(request):
 def show_exercise(request):
     exercises = Exercise.objects.all()
     return render(request, 'exercises_web.html', {'exercises': exercises})
+
+def post_detail(request, id):
+    post = get_object_or_404(LooseWrite, id=id)
+    return render(request, 'loose_web.html', {'post': post})

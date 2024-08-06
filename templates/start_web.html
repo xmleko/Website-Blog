@@ -31,7 +31,11 @@
             <ul>
                 {% for loose in loose %}
                 <li>
-                    <strong class="title">Tytuł:</strong> <span class="title">{{ loose.title }}</span><br>
+                    <strong class="title">Tytuł:</strong>
+                    <a href="{% url 'loose_web' loose.id %}">
+                        <span class="title">{{ loose.title }}</span>
+                    </a>
+                    <br>
                     <strong class="desc">Opis:</strong> <span class="desc">{{ loose.short_description }}</span><br>
                     <span class="author">{{ loose.author }}</span> <br>
                     <span class="date">{{ loose.data }}</span>  <br>
@@ -41,12 +45,16 @@
             </ul>
         </div>
 
+
         <div class="last_write">
             <ul>
-                <span class = "last_write_title">Ostatnie wpisy:</span>
+                <span class="last_write_title">Ostatnie wpisy:</span>
                 {% for loose in loose_last_write %}
                 <li>
-                    <span class="last_write_letter">{{ loose.title }}</span><br>
+                    <a href="{% url 'loose_web' loose.id %}">
+                        <span class="last_write_letter">{{ loose.title }}</span>
+                    </a>
+                    <br>
                 </li>
                 {% endfor %}
             </ul>

@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+    <div class="post-container">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.short_description }}</p>
+        <p><strong>Autor:</strong> {{ post.author }}</p>
+        <p><strong>Data:</strong> {{ post.data }}</p>
+    </div>
 </body>
 </html>
